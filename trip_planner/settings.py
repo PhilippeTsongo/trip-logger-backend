@@ -86,13 +86,27 @@ WSGI_APPLICATION = 'trip_planner.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DATABASE_NAME'),  # Change this to your database name
-        'USER': os.getenv('DB_USERNAME'),      # Change this to your PostgreSQL username
-        'PASSWORD': os.getenv('DB_PASSWORD'),  # Change this to your PostgreSQL password
-        'HOST': os.getenv('DATABASE_HOST'),
-        'PORT': '5432',
+        'NAME': os.getenv('PROD_DATABASE_NAME'),
+        'USER': os.getenv('PROD_USERNAME'),
+        'PASSWORD': os.getenv('PROD_DB_PASSWORD'),
+        'HOST': os.getenv('PROD_DATABASE_HOST'),  
+        'PORT': os.getenv('PROD_DATABASE_PORT'),
+        'OPTIONS': {
+            'sslmode': 'require', 
+        },
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.getenv('DATABASE_NAME'),  
+#         'USER': os.getenv('DB_USERNAME'),      
+#         'PASSWORD': os.getenv('DB_PASSWORD'), 
+#         'HOST': os.getenv('DATABASE_HOST'),
+#         'PORT': '5432',
+#     }
+# }
 
 
 # Password validation
