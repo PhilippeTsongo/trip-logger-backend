@@ -31,6 +31,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    ".railway.app",
     "trip-logger-backend-production.up.railway.app",
     "127.0.0.1",
     "localhost"
@@ -39,7 +40,7 @@ ALLOWED_HOSTS = [
 # Origins
 CORS_ALLOWED_ORIGINS = [
     'http://trip-logger-backend-production.up.railway.app', 
-    'https://trip-logger-jet.vercel.app/',
+    'https://trip-logger-jet.vercel.app',
     'http://127.0.0.1:5173',
     'http://127.0.0.1:5174',
     'http://localhost:5173',
@@ -90,8 +91,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-CORS_ALLOW_ALL_ORIGINS = True  # Allow frontend to connect
 
 ROOT_URLCONF = 'trip_planner.urls'
 
