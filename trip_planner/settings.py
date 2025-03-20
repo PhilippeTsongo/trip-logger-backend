@@ -36,6 +36,37 @@ ALLOWED_HOSTS = [
     "localhost"
 ]
 
+# Origins
+CORS_ALLOWED_ORIGINS = [
+    'http://trip-logger-backend-production.up.railway.app', 
+    'https://trip-logger-jet.vercel.app/',
+    'http://127.0.0.1:5173',
+    'http://127.0.0.1:5174',
+    'http://localhost:5173',
+    'http://localhost:5174'
+]
+
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
+
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+]
+
 # Application definition
 
 INSTALLED_APPS = [
