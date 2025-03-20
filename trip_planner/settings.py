@@ -40,6 +40,7 @@ ALLOWED_HOSTS = [
 # Origins
 CORS_ALLOWED_ORIGINS = [
     "https://trip-logger-backend-production.up.railway.app",
+    "https://trip-logger-jet.vercel.app",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
