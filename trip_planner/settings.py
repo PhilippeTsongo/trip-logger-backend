@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     ".railway.app",
@@ -38,14 +38,7 @@ ALLOWED_HOSTS = [
 ]
 
 # Origins
-CORS_ALLOWED_ORIGINS = [
-    'http://trip-logger-backend-production.up.railway.app', 
-    'https://trip-logger-jet.vercel.app',
-    'http://127.0.0.1:5173',
-    'http://127.0.0.1:5174',
-    'http://localhost:5173',
-    'http://localhost:5174'
-]
+CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOW_METHODS = [
     "DELETE",
@@ -69,7 +62,6 @@ CORS_ALLOW_HEADERS = [
 ]
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
