@@ -32,21 +32,25 @@ DEBUG = False
 
 # ALLOWED_HOSTS = ["*"]
 ALLOWED_HOSTS = [
-    ".railway.app",
-    "trip-logger-backend-production.up.railway.app",
-    "trip-logger-jet.vercel.app",
-    "127.0.0.1",
-    "localhost"
+    ".railway.app", 
+    "trip-logger-backend-production.up.railway.app", 
+    "trip-logger-jet.vercel.app", 
+    "127.0.0.1",  
+    "localhost", 
 ]
 
 # Origins
 # CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     "https://trip-logger-backend-production.up.railway.app",
-    "https://trip-logger-backend-production.up.railway.app:8080", 
     "https://trip-logger-jet.vercel.app",
     "http://localhost:5173",
-    "http://127.0.0.1:5173",
+    "http://127.0.0.1:5173",  
+]
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:5173', 
+    'http://trip-logger-jet.vercel.app', 
 ]
 
 CORS_ALLOW_METHODS = [

@@ -89,7 +89,7 @@ class TripDetailAPIView(APIView):
                 {"lat": current_location_dict.get('lat', None), "lon": current_location_dict.get('lon', None)},
                 {"lat": pickup_location_dict.get('lat', None), "lon": pickup_location_dict.get('lon', None)},
                 {"lat": dropoff_location_dict.get('lat', None), "lon": dropoff_location_dict.get('lon', None)},
-                )
+            )
 
             if "error" in route_data:
                 return Response({"error": route_data["error"]}, status=status.HTTP_400_BAD_REQUEST)
